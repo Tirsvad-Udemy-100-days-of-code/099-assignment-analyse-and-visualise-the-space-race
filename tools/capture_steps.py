@@ -91,7 +91,9 @@ def main() -> None:
             body, _ = exporter.from_notebook_node(part)
             html_path.write_text(body, encoding="utf-8")
             png_path = IMAGE_DIRECTORY / f"{slug}.png"
-            subprocess.run(  # noqa: S603
+            # The command is built only from the fixed browser paths above and
+            # temporary files this script wrote; no outside text reaches it.
+            subprocess.run(  # noqa: S603  # nosemgrep: opengrep.selected-rules.python.lang.security.audit.dangerous-subprocess-use-audit
                 [
                     str(browser),
                     "--headless=new",

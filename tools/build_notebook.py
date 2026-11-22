@@ -12,74 +12,97 @@ import nbformat
 from nbformat.v4 import new_code_cell, new_markdown_cell, new_notebook
 
 NOTEBOOK_PATH = Path("notebooks") / "space_missions_analysis.ipynb"
+## Separator of the lines of a cell.
+LINE_BREAK = chr(10)
 
 
-def step(slug: str, text: str) -> nbformat.NotebookNode:
+def md(*lines: str) -> nbformat.NotebookNode:
+    """!
+    @brief Make a markdown cell from lines of text.
+
+    @param lines The lines, joined with line breaks.
+    @return The cell.
+    """
+    return new_markdown_cell(LINE_BREAK.join(lines))
+
+
+def code(*lines: str) -> nbformat.NotebookNode:
+    """!
+    @brief Make a code cell from lines of code.
+
+    @param lines The lines, joined with line breaks.
+    @return The cell.
+    """
+    return new_code_cell(LINE_BREAK.join(lines))
+
+
+def step(slug: str, *lines: str) -> nbformat.NotebookNode:
     """!
     @brief Make the markdown cell that opens a lecture step.
 
     @param slug Step name used in the screenshot file name.
-    @param text Markdown of the cell.
+    @param lines The lines of the cell.
     @return The cell, tagged with the step slug.
     """
-    cell = new_markdown_cell(text)
+    cell = md(*lines)
     cell.metadata["step"] = slug
     return cell
 
 
 CELLS = [
-    new_markdown_cell(
-        "# Analyse and Visualise the Space Race\n\n"
-        "Day 99 assignment of the 100 Days of Code Python bootcamp. "
-        "The data was scraped from nextspaceflight.com and holds the space "
-        "missions since 1957."
+    md(
+        "# Analyse and Visualise the Space Race",
+        "",
+        "Day 99 assignment of the 100 Days of Code Python bootcamp.",
+        "The data was scraped from nextspaceflight.com and holds the space",
+        "missions since 1957.",
     ),
-    new_markdown_cell("### Import Statements"),
-    new_code_cell(
-        "import pandas as pd\n\n"
-        "from space_race.cleaning import clean_missions\n"
-        "from space_race.exploration import explore\n"
-        "from space_race.loading import load_missions"
+    md("### Import Statements"),
+    code(
+        "import pandas as pd",
+        "",
+        "from space_race.cleaning import clean_missions",
+        "from space_race.exploration import explore",
+        "from space_race.loading import load_missions",
     ),
-    new_markdown_cell("### Notebook Presentation"),
-    new_code_cell("pd.options.display.float_format = '{:,.2f}'.format"),
-    new_markdown_cell("### Load the Data"),
-    new_code_cell("df_data = load_missions()"),
+    md("### Notebook Presentation"),
+    code("pd.options.display.float_format = '{:,.2f}'.format"),
+    md("### Load the Data"),
+    code("df_data = load_missions()"),
     step(
         "01-preliminary-data-exploration",
-        "# Preliminary Data Exploration\n\n"
-        "* What is the shape of `df_data`?\n"
-        "* How many rows and columns does it have?\n"
-        "* What are the column names?\n"
+        "# Preliminary Data Exploration",
+        "",
+        "* What is the shape of `df_data`?",
+        "* How many rows and columns does it have?",
+        "* What are the column names?",
         "* Are there any NaN values or duplicates?",
     ),
-    new_code_cell(
-        "facts = explore(df_data)\n"
-        "print(f'Shape: {df_data.shape}')\n"
-        "print(f'Rows: {facts.row_count}, columns: {facts.column_count}')\n"
-        "print(f'Columns: {facts.column_names}')\n"
-        "print(f'Missing values per column: {facts.missing_by_column}')\n"
-        "print(f'Duplicate rows: {facts.duplicate_count}')"
+    code(
+        "facts = explore(df_data)",
+        "print(f'Shape: {df_data.shape}')",
+        "print(f'Rows: {facts.row_count}, columns: {facts.column_count}')",
+        "print(f'Columns: {facts.column_names}')",
+        "print(f'Missing values per column: {facts.missing_by_column}')",
+        "print(f'Duplicate rows: {facts.duplicate_count}')",
     ),
-    new_code_cell("df_data.head()"),
+    code("df_data.head()"),
     step(
         "02-data-cleaning",
-        "## Data Cleaning - Check for Missing Values and Duplicates\n\n"
-        "Remove the junk index columns and the duplicate row, make `Price` "
-        "numeric (USD millions, missing stays missing), parse the dates and "
+        "## Data Cleaning - Check for Missing Values and Duplicates",
+        "",
+        "Remove the junk index columns and the duplicate row, make `Price`",
+        "numeric (USD millions, missing stays missing), parse the dates and",
         "add the launching country.",
     ),
-    new_code_cell(
-        "df_data = clean_missions(df_data)\n"
-        "print(f'Shape after cleaning: {df_data.shape}')\n"
-        "df_data.isna().sum()"
+    code(
+        "df_data = clean_missions(df_data)",
+        "print(f'Shape after cleaning: {df_data.shape}')",
+        "df_data.isna().sum()",
     ),
-    new_code_cell("df_data.head()"),
-    step(
-        "03-descriptive-statistics",
-        "## Descriptive Statistics",
-    ),
-    new_code_cell("df_data.describe(include='all')"),
+    code("df_data.head()"),
+    step("03-descriptive-statistics", "## Descriptive Statistics"),
+    code("df_data.describe(include='all')"),
 ]
 
 
