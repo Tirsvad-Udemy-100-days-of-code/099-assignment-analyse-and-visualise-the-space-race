@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [a2af282] |
 
 ---
 
@@ -67,3 +67,4 @@ Go — every Mandatory criterion of QC-SA-001 and of QC-LANG-001 passes; the rev
 [SA-001]: ../../stakeholder-analysis.md
 [QC-SA-001]: ../../../framework/qc/artifacts/qc-stakeholder-analysis.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
+[a2af282]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/a2af2824cad60b6814f7e783c4efa3c416b4b080

@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-23 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | pending |
-| 2026-11-23 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted after RC-003 (Go) | pending |
+| 2026-11-23 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [a2af282] |
+| 2026-11-23 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted after RC-003 (Go) | [a2af282] |
 
 ---
 
@@ -96,3 +96,4 @@ A No-Go moves every later gateway by the time needed to fix it; the end date 202
 [MIL-002]: ./milestones/mil-002-data-preparation.md
 [MIL-003]: ./milestones/mil-003-analysis-and-charts.md
 [MIL-004]: ./milestones/mil-004-documentation-and-wiki.md
+[a2af282]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/a2af2824cad60b6814f7e783c4efa3c416b4b080

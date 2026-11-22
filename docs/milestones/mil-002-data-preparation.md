@@ -11,8 +11,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-23 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | pending |
-| 2026-11-23 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted after RC-005 (Go) | pending |
+| 2026-11-23 | Deprecated | Jens Tirsvad Nielsen | S01 | Initial version | [a2af282] |
+| 2026-11-23 | Accepted | Jens Tirsvad Nielsen | S01 | Accepted after RC-005 (Go) | [a2af282] |
 
 ---
 
@@ -70,3 +70,4 @@ A tested loading and cleaning module, a notebook section for each of the two ste
 ---
 
 [BC-001]: ../business-case.md
+[a2af282]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/a2af2824cad60b6814f7e783c4efa3c416b4b080
