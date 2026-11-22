@@ -1,0 +1,43 @@
+# Byte-compiled and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging and build output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Doxygen output
+/docs/doxygen/
+
+# Local secrets and personal files: never committed
+.env
+.env.*
+!.env.example
+
+# Session prompt log (the repository is public through its mirror)
+/docs/ai-prompts/
+
+# Raw data download (see README for where to get it)
+/data/raw/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
