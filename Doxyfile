@@ -1,0 +1,19 @@
+# Doxygen configuration for the Space Race analysis.
+# Generate the documentation with: doxygen Doxyfile
+PROJECT_NAME           = "Space Race Analysis"
+PROJECT_BRIEF          = "Analyse and visualise the Space Race"
+OUTPUT_DIRECTORY       = docs/doxygen
+INPUT                  = src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.py
+OPTIMIZE_OUTPUT_JAVA   = YES
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = NO
+JAVADOC_AUTOBRIEF      = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+QUIET                  = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO

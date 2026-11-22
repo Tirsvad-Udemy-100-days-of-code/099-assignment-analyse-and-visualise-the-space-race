@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "space-race"
+version = "0.1.0"
+description = "Analyse and visualise the Space Race: Day 99 assignment of the 100 Days of Code Python bootcamp."
+readme = "README.md"
+requires-python = ">=3.14"
+license = "AGPL-3.0-or-later"
+# The package itself has no runtime dependencies. The notebook libraries are
+# an optional extra: pip install -e ".[notebook]"
+dependencies = []
+
+[project.optional-dependencies]
+notebook = [
+    "jupyterlab>=4",
+    "pandas>=2",
+    "numpy>=2",
+    "plotly>=5",
+    "matplotlib>=3.9",
+    "kaleido>=1",
+    "pycountry>=24",
+]
+dev = [
+    "pytest>=8",
+    "ruff>=0.8",
+    "mypy>=1.13",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "D"]
+# D205: Doxygen tags (@file, @brief) open each docstring.
+ignore = ["D203", "D205", "D213"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.mypy]
+strict = true
+python_version = "3.14"
