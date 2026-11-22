@@ -9,7 +9,9 @@ Analyse and visualise the space missions since 1957: who launched most, what a l
 - [Overview](#-overview)
 - [Requirements](#-requirements)
 - [Setup](#-setup)
+- [Data](#-data)
 - [Run](#-run)
+- [Lecture steps](#-lecture-steps)
 - [Tests](#-tests)
 - [License](#-license)
 - [Links](#-links)
@@ -57,6 +59,16 @@ python -m pip install -e ".[dev,notebook]"
 
 Leave the environment with `deactivate`. Install only `".[dev]"` if you want the tests and no notebook libraries.
 
+## 📥 Data
+
+The data file is not in the repository. Get it from the course resources (`Space Missions (start).zip` of the Day 99 assignment), unzip it and put `mission_launches.csv` in `data/raw/`, which git ignores. The file has 4,324 data rows and this SHA-256 checksum:
+
+```text
+ae8097c187d910380a92c5258582981246856766e31541687f04909e78888084
+```
+
+Check it with `Get-FileHash data\raw\mission_launches.csv` (PowerShell) or `sha256sum data/raw/mission_launches.csv`.
+
 ## ▶️ Run
 
 Start Jupyter with the environment active, then open the notebook:
@@ -71,6 +83,29 @@ Build the source documentation (output in `docs/doxygen/`):
 doxygen Doxyfile
 ```
 
+Open `notebooks/space_missions_analysis.ipynb`. To make the screenshots of the lecture steps again (a headless browser renders them, no window opens):
+
+```bash
+python tools/build_notebook.py
+python tools/capture_steps.py
+```
+
+## 🖼️ Lecture steps
+
+Each step of the assignment, as the notebook shows it.
+
+### 1. Preliminary data exploration
+
+![Preliminary data exploration](docs/images/01-preliminary-data-exploration.png)
+
+### 2. Data cleaning
+
+![Data cleaning](docs/images/02-data-cleaning.png)
+
+### 3. Descriptive statistics
+
+![Descriptive statistics](docs/images/03-descriptive-statistics.png)
+
 ## 🧪 Tests
 
 ```bash
@@ -80,7 +115,7 @@ python -m pytest
 Before each push, run the static analysis with opengrep:
 
 ```powershell
-& "$HOME\.opengrep\cli\latest\opengrep.exe" scan --config p/python --error src tests
+& "$HOME\.opengrep\cli\latest\opengrep.exe" scan --config p/python --error src tools
 ```
 
 ## 📄 License

@@ -1,0 +1,7 @@
+,Unnamed: 0,Organisation,Location,Date,Detail,Rocket_Status,Price,Mission_Status
+0,0,SpaceX,"LC-39A, Kennedy Space Center, Florida, USA","Fri Aug 07, 2020 05:12 UTC",Falcon 9 Block 5 | Starlink V1 L9 & BlackSky,StatusActive,50.0,Success
+1,1,CASC,"Site 9401 (SLS-2), Jiuquan Satellite Launch Center, China","Thu Aug 06, 2020 04:01 UTC",Long March 2D | Gaofen-9 04 & Q-SAT,StatusActive,29.75,Success
+2,2,Roscosmos,"Site 31/6, Baikonur Cosmodrome, Kazakhstan","Thu Aug 29, 2019",Soyuz | Example,StatusActive,"1,160.0",Failure
+3,3,Sea Launch,"Odyssey Launch Platform, Pacific Ocean","Sun Jan 01, 2006 00:00 UTC",Zenit | Example,StatusRetired,,Partial Failure
+4,4,RVSN USSR,"Site 1/5, Baikonur Cosmodrome, Russia","Tue Sep 01, 1964 10:00 UTC",Vostok | Example,StatusRetired,,Success
+5,5,RVSN USSR,"Site 1/5, Baikonur Cosmodrome, Russia","Tue Sep 01, 1964 10:00 UTC",Vostok | Example,StatusRetired,,Success
