@@ -21,12 +21,14 @@ notebook = [
     "plotly>=5",
     "matplotlib>=3.9",
     "kaleido>=1",
-    "pycountry>=24",
+    "seaborn>=0.13",
+    "iso3166>=2",
 ]
 dev = [
     "pytest>=8",
     "ruff>=0.8",
     "mypy>=1.13",
+    "pandas-stubs",
 ]
 
 [tool.setuptools.packages.find]
