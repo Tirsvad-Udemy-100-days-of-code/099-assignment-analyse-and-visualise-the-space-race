@@ -92,7 +92,7 @@ python tools/capture_steps.py
 
 ## 🖼️ Lecture steps
 
-Each step of the assignment, as the notebook shows it.
+Each step of the assignment, as the notebook shows it. The [wiki][documentation] explains what each step taught, in English, Danish and Bahasa Malaysia, and holds the reflection journal.
 
 ### 1. Preliminary data exploration
 
