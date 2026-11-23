@@ -10,6 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [e32aa44] |
+| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 checked on the published wiki | [fd81959] |
 
 ---
 
@@ -39,19 +40,18 @@
 | 11 | Every page starts with the language line, with the current language in bold and a link to the same page in each other language | Pass | Every page starts with the language line, the current language in bold, linking to the same page in the other two. |
 | 12 | A page in a language other than English is named `<Page>-<code>.md`, with a BCP 47 code; English has no suffix | Pass | Translations are named `<Page>-da.md` and `<Page>-ms.md`; English has no suffix. |
 | 13 | Code blocks, commands, file names and IDs stay in English in every language | Pass | Code blocks, commands, file names and function names are English in all languages. |
-| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Open | Not yet possible: no workflow publishes `docs/wiki/` and the wiki is not published. Open action item below. |
+| 14 | The sidebar, every page and every link were checked on the published wiki after the change, not only in the repository | Pass | Checked on the published wiki on 2026-11-23, after the merge of PR 31: all 40 pages and the sidebar exist and match the repository line for line (only line endings differ), no link is dead, and all 10 screenshots load. |
 | 15 | A change to the layout rules (sections, order, naming) is made in the generator or template and in this checklist's source rules together | Pass | Optional; no generator or template is used. |
 | 16 | The wiki folder (`docs/wiki/`) is flat: every page, `Home.md` and `_Sidebar.md` included, is directly in it, and languages are told apart by file name, never by a subfolder | Pass | All 40 files are directly in `docs/wiki/`; there is no subfolder. |
 
 ## Overall Verdict
 
-Go for the content in the repository: every Mandatory criterion passes except criterion 14, which cannot be checked before the wiki is published. It is an open action item, not a pass. The review is a stand-in review and not independent.
+Go — every Mandatory criterion passes, criterion 14 included (checked on the published wiki). The review is a stand-in review and not independent.
 
 ## Action Items
 
 | Action | Owner | Due |
 | --- | --- | --- |
-| Publish `docs/wiki/` to the host wiki, then check the sidebar, every page and every link there (criterion 14) | S01 | 2026-12-20 |
 | Read the Danish and Bahasa Malaysia pages for wording; no native-speaker review has happened | S01 | 2026-12-20 |
 
 ---
@@ -59,3 +59,4 @@ Go for the content in the repository: every Mandatory criterion passes except cr
 [MIL-004]: ../../milestones/mil-004-documentation-and-wiki.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [e32aa44]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/e32aa4404f1851913782f6f99bd4ded072f10e6f
+[fd81959]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/fd8195954dfa62e2506315c4e9fee8225699a3a4
