@@ -73,3 +73,24 @@ LOCATION_COUNTRY_FIXES: dict[str, str] = {
     "North Korea": "Korea, Democratic People's Republic of",
     "South Korea": "Korea, Republic of",
 }
+
+## Added column: the ISO 3166 alpha-3 code of the launching country.
+COL_COUNTRY_CODE: str = "Country_Code"
+
+## Mission status of a launch that reached its goal; every other status counts
+## as a failure (Failure, Partial Failure, Prelaunch Failure).
+STATUS_SUCCESS: str = "Success"
+
+## Last year of the Cold War comparison (the Soviet Union ended in 1991).
+COLD_WAR_END_YEAR: int = 1991
+## Label of the United States in the Cold War comparison.
+SIDE_USA: str = "USA"
+## Label of the Soviet Union in the Cold War comparison.
+SIDE_USSR: str = "USSR"
+## Countries whose launch sites were Soviet before 1992 (Baikonur is in
+## Kazakhstan), mapped to the side they belong to.
+COLD_WAR_SIDES: dict[str, str] = {
+    "United States of America": SIDE_USA,
+    "Russian Federation": SIDE_USSR,
+    "Kazakhstan": SIDE_USSR,
+}
