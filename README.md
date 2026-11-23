@@ -106,6 +106,34 @@ Each step of the assignment, as the notebook shows it.
 
 ![Descriptive statistics](docs/images/03-descriptive-statistics.png)
 
+### 4. Launches per organisation and rocket status
+
+![Launches per organisation and rocket status](docs/images/04-launches-per-organisation-and-rocket-status.png)
+
+### 5. Launch prices and money spent
+
+![Launch prices and money spent](docs/images/05-launch-prices-and-money-spent.png)
+
+### 6. Launches per year, month and over time
+
+![Launches per year, month and over time](docs/images/06-launches-per-year-month-and-over-time.png)
+
+### 7. Country analysis with choropleth maps
+
+![Country analysis with choropleth maps](docs/images/07-country-analysis-with-choropleth-maps.png)
+
+### 8. Sunburst chart
+
+![Sunburst chart](docs/images/08-sunburst-chart.png)
+
+### 9. Organisations and countries over time
+
+![Organisations and countries over time](docs/images/09-organisations-and-countries-over-time.png)
+
+### 10. Mission safety over time
+
+![Mission safety over time](docs/images/10-mission-safety-over-time.png)
+
 ## 🧪 Tests
 
 ```bash
@@ -115,7 +143,7 @@ python -m pytest
 Before each push, run the static analysis with opengrep:
 
 ```powershell
-& "$HOME\.opengrep\cli\latest\opengrep.exe" scan --config p/python --error src tools
+& "$HOME\.opengrep\cli\latest\opengrep.exe" scan --config p/python --config p/security-audit --config p/default --error src tools tests
 ```
 
 ## 📄 License

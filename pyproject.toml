@@ -53,3 +53,7 @@ convention = "pep257"
 [tool.mypy]
 strict = true
 python_version = "3.14"
+
+[[tool.mypy.overrides]]
+module = ["plotly", "plotly.*", "iso3166"]
+ignore_missing_imports = true
