@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | pending |
+| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [e32aa44] |
 
 ---
 
@@ -58,3 +58,4 @@ Go for the content in the repository: every Mandatory criterion passes except cr
 
 [MIL-004]: ../../milestones/mil-004-documentation-and-wiki.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
+[e32aa44]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/e32aa4404f1851913782f6f99bd4ded072f10e6f
