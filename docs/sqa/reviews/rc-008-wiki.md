@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Initial version | [e32aa44] |
-| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 checked on the published wiki | pending |
+| 2026-11-23 | Proposed | Jens Tirsvad Nielsen | S01 | Criterion 14 checked on the published wiki | [fd81959] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — every Mandatory criterion passes, criterion 14 included (checked on the p
 [MIL-004]: ../../milestones/mil-004-documentation-and-wiki.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
 [e32aa44]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/e32aa4404f1851913782f6f99bd4ded072f10e6f
+[fd81959]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/099-assignment-analyse-and-visualise-the-space-race/commit/fd8195954dfa62e2506315c4e9fee8225699a3a4
